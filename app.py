@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import requests
 app = Flask(__name__)
 
 
@@ -13,7 +14,7 @@ def covid_stats():
 
     result = 'https://newton.now.sh/api/v2//'+operation+'/' + equation
 
-    data = request.get(result).json()
+    data = requests.get(result).json()
 
     answer = data['result']
 
