@@ -13,7 +13,7 @@ def covid_stats():
 
     result = 'https://newton.now.sh/api/v2//'+operation+'/' + equation
 
-    data = requests.get(result).json()
+    data = request.get(result).json()
 
     answer = data['result']
 
